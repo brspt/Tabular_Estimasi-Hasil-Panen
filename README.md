@@ -23,3 +23,14 @@ pip install -r requirements.txt
 ## Sumber Dataset
 
 Dataset berasal dari Kaggle dataset `brspot/dataset2`.
+
+## Pemeriksaan Indeks Sampel
+
+Pada notebook load model, `SAMPLE_ROW_INDEX` memakai posisi mulai dari nol pada
+CSV model-ready dan harus berada dalam rentang `0 <= index < jumlah_baris`.
+Angka negatif ditolak agar tidak diam-diam memilih baris dari akhir CSV.
+Jalankan pemeriksaan tanpa model/dataset tambahan:
+
+```bash
+python test_sample_index.py
+```
